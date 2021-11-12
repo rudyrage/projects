@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: black;
+			color: white;
+		}
+		button:active {
+			background-color: black;
+			color: white;
+		}
+		
+		#display {
+			margin-top: 10vh;
+		}
+		#display h1{
+			visibility: collapse;
+			margin: auto;
+			/*background-color: ;*/
+		}
+		h1 {
+			text-align: center;
+		}
+		header {
+			text-align: center;
+			margin-left: 40%;
+		}
+
+		img {
+			width: 20%;
+			height: 100%;
+		}
+		aside {
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+		button {
+			width: 15em;
+			height: 5em;
+		}
+
+		.turn {
+			width: 10vmax;
+			height: 5vmin;
+			background-color: red;
+		}
+
+		.ground {
+			width: 82%;
+			margin: auto;
+		}
+
+		.mediums {
+			background-color: lightgray;
+			display: flex;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="j">The rock paper scissors</h1>
+	<main>
+		<header>
+			<table>
+				<caption>
+					<h3>SCORE</h3>
+				</caption>
+				<tbody>
+					<tr>
+						<th>Player</th>
+						<th>Computer</th>
+						<th>Tie</th>
+					</tr>
+					<tr>
+						<td id="player-score">0</td>
+						<td id="computer-score">0</td>
+						<td id="tie-score">0</td>
+					</tr>
+				</tbody>
+			</table>
+		</header>
+		<aside>
+			<section>
+				<h2>Player</h2>
+				<div id="player-turn" class="turn"></div>
+			</section>
+			<section>
+				<h2>computer</h2>
+				<div id="computer-turn" class="turn"></div>
+			</section>
+		</aside>
+		<aside class="ground">
+			<div class="mediums">
+				<img src="./images/rock.png" alt="">
+				<img src="./images/paper.png" alt="">
+				<img src="./images/scissors.png" alt="">
+			</div>
+		</aside>
+		<aside>
+			<button id="rock">ROCK</button>
+			<button id="paper">PAPER</button>
+			<button id="scissor">SCISSOR</button>
+		</aside>
+		<div id="display">
+			<h1></h1>
+		</div>
+	</main>
+</body>
+<script src="index.js"></script>
+</html>

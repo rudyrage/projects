@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	body {
+		background-color: gray;
+	}
+	* {
+		color: #fff;
+	}
+		.clock {display: flex;  height: 100vh; margin-top: 45vh;}
+		.box {
+			width: 33.33%;
+			height: 10%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.hour-container {
+			background-color: #000;
+		}
+		.minute-container {
+			background-color: purple;
+		}
+		.second-container {
+			background-color: #2e0000;
+		}
+		h1 {
+			font-size: 2.5em;
+		}
+	</style>
+</head>
+<body>
+	<div class="clock">
+		<div class="box hour-container">
+			<h1 id="hour"></h1>
+		</div>
+		<div class="box minute-container">
+			<h1 id="minute"></h1>
+		</div>
+		<div class="box second-container">
+			<h1 id="second"></h1>
+		</div>
+	</div>
+</body>
+<script>
+	let displayClock = document.getElementById('display');
+	
+	function clock() {
+		let hour = document.getElementById("hour");
+		let minute = document.getElementById("minute");
+		let second = document.getElementById("second");
+
+		let date = new Date();
+
+		hour.textContent = date.getHours();
+		minute.textContent = date.getMinutes();
+		second.textContent = date.getSeconds();
+	}
+
+	// clock()
+
+	setInterval(clock, 1000)
+</script>
+</html>
