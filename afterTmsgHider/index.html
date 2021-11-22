@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			background-color: #000;
+		}
+
+		.box {
+			width: 100%;
+			height: 99vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		#msg-box {
+			width: 40%;
+			height: 50%;
+			background-image: linear-gradient(90deg, rgb(50,150,100), rgb(100,150,50));
+			color: white;
+			font-size: 2em;
+		}
+
+		button {
+			width: 40.5%;
+			height: 5vh;
+			background-color: rgb(150,150,150);
+			border: 1px solid transparent;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<textarea name="msbox" id="msg-box" cols="30" rows="10"></textarea>
+		<button>hide</button>
+	</div>
+</body>
+<script>
+	let elm = document.querySelector("textarea");
+	let btn = document.querySelector("button");
+	btn.onclick = function() {
+  	function hide() {
+      elm.value = "";
+  	}
+    if (elm.value) 
+    	setTimeout(hide, 3000)
+}
+</script>
+</html>

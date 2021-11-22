@@ -1,9 +1,5 @@
-function chooseIndex(max) {
- let index = Math.floor(Math.random() * (max));
- return index;
-}
 
-function colorGenerateor() {
+const generateColor =  function colorGenerateor() {
  let colorTokens = "0123456789abcdef".split('');
  let color = "#";
 
@@ -13,12 +9,19 @@ function colorGenerateor() {
  return color;
 }
 
+function chooseIndex(max) {
+ let index = Math.floor(Math.random() * (max));
+ return index;
+}
+
+
+
 
 let button = document.querySelector("button");
 let colorName = document.querySelector("input");
 
 button.addEventListener( 'click', () => {
- button.value = colorGenerateor();
+ button.value = generateColor();
  colorName.value = button.value;
  document.body.style.backgroundColor = colorName.value;
 } )
@@ -26,3 +29,5 @@ button.addEventListener( 'click', () => {
 window.onload = function() {
  colorName.value = "#";
 }
+
+

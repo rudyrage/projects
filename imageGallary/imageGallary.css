@@ -1,0 +1,51 @@
+body {
+	background-color: #000;
+	color: #fff;
+}
+
+.display-area{
+	width: 100%;
+	height: 98vh;
+	border: 1px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.display-area:hover > div{
+	display: flex;
+}
+
+button {
+	font-size: 5.5em;
+	width: 10vmax;
+	height: 15vh;
+	background-color: transparent;
+	border: none;
+	color: rgb(50,100,150);
+}
+
+button:hover {
+	color: red;
+}
+
+
+.buttons{
+	position: absolute;
+	display: none;
+}
+
+.next {
+	right: 10px;
+	top: 45%;
+}
+
+.previous {
+	left: 10px;
+	top: 45%;
+}
